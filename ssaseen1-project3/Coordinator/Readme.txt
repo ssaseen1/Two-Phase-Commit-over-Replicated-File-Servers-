@@ -1,5 +1,5 @@
 Requirements to run the Coordinator:
-participant_info.txt
+coordinator_info.txt
 
 Requirements to run the Participant:
 participant_info.txt
