@@ -1,8 +1,6 @@
 # Two-Phase-Commit-over-Replicated-File-Servers-
 Java Multithreaded &amp; SQLite
 
-Language Used : Java, SQLite
-
 Implementation Description :
 
 TwoPhaseProtocol Implementation:
@@ -42,7 +40,7 @@ participant_info.txt
 2)bash
 3)source source
 4)chmod a+x Coordinator.sh
-5)./Coordinator.sh <ParticipantHostname> <ParticipantPortNumber>
+5)./Coordinator.sh ParticipantHostname ParticipantPortNumber
 
 Requirements to run the ParticipantInvoker:
 p_info.txt
@@ -50,7 +48,7 @@ p_info.txt
 2)bash
 3)source source
 4)chmod a+x ParticipantInvoker.sh
-5)./ParticipantInvoker.sh <ParticipantHostname> <InvokerPortNumber> <ParticipantPortNumber>
+5)./ParticipantInvoker.sh ParticipantHostname InvokerPortNumber ParticipantPortNumber
 
 ==> TwoPhaseProtocolInvoker:
 Requirements to run the TwoPhaseProtocolInvoker:
@@ -61,5 +59,5 @@ invoker_info.txt
 2)bash
 3)source source
 4)chmod a+x TwoPhaseProtocolInvoker.sh
-5)./TwoPhaseProtocolInvoker.sh <TestCaseNumber>
+5)./TwoPhaseProtocolInvoker.sh TestCaseNumber
 
