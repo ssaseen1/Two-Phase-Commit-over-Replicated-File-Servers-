@@ -1,0 +1,2 @@
+remote02.cs.binghamton.edu 5000 5001
+remote03.cs.binghamton.edu 6000 6001

@@ -1,0 +1,2 @@
+replica1 remote02.cs.binghamton.edu 5001
+replica2 remote03.cs.binghamton.edu 6001

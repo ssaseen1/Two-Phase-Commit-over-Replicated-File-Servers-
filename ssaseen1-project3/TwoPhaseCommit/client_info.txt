@@ -1,0 +1,2 @@
+remote04.cs.binghamton.edu 7001 7000 write invoker_info.txt
+remote04.cs.binghamton.edu 7001 7000 read invoker_info.txt

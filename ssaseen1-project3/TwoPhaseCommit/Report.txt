@@ -1,0 +1,57 @@
+Structure of code:
+
+	- Client initiates a writeFile or readFile or deleteFile operation by invoking the respective method of the Coordinator. 
+	
+	- On invocation of its readFile or writeFile method, the Coordinator dislays the following menu:
+		1. Send Vote Request
+		2. Send Vote Request & Fail
+		
+	- For option 1, it asks for the votes of all the Participants and then continue with the 2 PC operation
+	- For option 2, it sends a vote request to all the Participants and crashes.
+	
+	- On invocation of its readFile or writeFile method, the Participant dislays the following menu:
+		1. Send Commit
+		2. Send Abort
+		3. Send Commit & Fail
+	
+	- For option 1, it will send a commit reply
+	- For option 2, it will send an abort reply
+	- For option 3, it will send a commit reply and crashes
+	
+
+RPC interface of Participant:
+
+  TwoPhaseCommit deleteFile(1: string filename, 2: TwoPhaseCommit twoPhaseCommmit)
+    throws (1: SystemException systemException)
+  
+  TwoPhaseCommit writeFile(1: RFile rFile, 2: TwoPhaseCommit twoPhaseCommmit)
+    throws (1: SystemException systemException)
+  
+  RFile readFile(1: string filename)
+    throws (1: SystemException systemException)
+	
+  string lastDecision(1: i32 transaction_id)
+    throws (1: SystemException systemException)
+	
+
+Failure Detection:
+
+	- 
+	
+	
+Test Cases:
+
+Coordinator	
+	1. Send vote request
+	2. Send vote request & Fail
+	
+Participant
+	1. Send Commit
+	2. Send Abort
+	3. Send Commit & Fail
+	
+- For consecutive delete on same  file, the second delete operation will abort
+- Coordinator recovery
+- Participant recovery
+- File for read file operation does not exist
+- File for delete file does not exist

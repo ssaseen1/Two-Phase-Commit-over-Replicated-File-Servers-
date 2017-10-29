@@ -1,0 +1,2 @@
+remote04.cs.binghamton.edu 7001 7000 write testInput1.txt
+remote04.cs.binghamton.edu 7001 7000 read testInput1.txt
